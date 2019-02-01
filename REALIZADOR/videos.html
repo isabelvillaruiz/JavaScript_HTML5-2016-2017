@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<h2  style="text-align:center"> REALIZADOR DE VIDEOS<hr></h2>
+<title >REALIZADOR</title>
+<link href='icono.jpeg' rel='shortcut icon' type='image/png'>
+<body style="background-color: #ac3939">
+
+<div style="text-align:center">
+  <button onclick="playPause()">Play/Pause</button>
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="realizador-fuente1" onclick="changeVideo(1)" width="300">
+    <source src="realizador-fuente1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <video id="realizador-fuente2" onclick="changeVideo(2)" width="300">
+    <source src="realizador-fuente2.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <video id="realizador-fuente3" onclick="changeVideo(3)"width="300">
+    <source src="realizador-fuente3.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <video id="realizador-fuente4" onclick="changeVideo(4)" width="320" height="200">
+    <source src="realizador-fuente4.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+
+
+
+  <video id="video1" width="540" muted>
+    <source src="realizador-fuente1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</div>
+
+<script>
+var myVideo1 = document.getElementById("realizador-fuente1");
+var myVideo2 = document.getElementById("realizador-fuente2");
+var myVideo3 = document.getElementById("realizador-fuente3");
+var myVideo4 = document.getElementById("realizador-fuente4");
+var myVideo = document.getElementById("video1");
+
+function play(){
+  myVideo1.play();
+  myVideo.play();
+  myVideo2.play();
+  myVideo3.play();
+  myVideo4.play();
+  myVideo5.play();
+  playing = true;
+}
+
+function pause(){
+  myVideo1.pause();
+  myVideo.pause();
+  myVideo2.pause();
+  myVideo3.pause();
+  myVideo4.pause();
+  myVideo5.pause();
+  playing = false;
+}
+
+function playPause() {
+    if (myVideo1.paused){
+        play();
+        playPauseButton.textContent = "Pause";
+    }else{
+        pause();
+        playPauseButton.textContent = "Play";
+    }
+}
+
+
+function makeBig() {
+    myVideo1.width += 60;
+}
+
+function makeSmall() {
+    myVideo1.width -= 60;
+}
+
+function makeNormal() {
+    myVideo1.width = 300;
+}
+
+
+
+function Change_PlayPause() {
+    if (!playing){
+        pause();
+    }else{
+        play();
+    }
+}
+
+function changeVideo(value) {
+  time = myVideo1.currentTime;
+  myVideo.src = "realizador-fuente"+value+".mp4";
+  myVideo.currentTime = time;
+  Change_PlayPause();
+}
+
+</script>
+
+</body>
+</html>

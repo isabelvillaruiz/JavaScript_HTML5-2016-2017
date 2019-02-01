@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <h2>C   H   R   O   M    A<hr></h2>
+  <link href='icono.png' rel='shortcut icon' type='image/png'>
+  <title>CHROMA</title>
+  <head>
+    <style>
+      body {
+        background: black;
+        color:#CCCCCC;
+      }
+      #c2 {
+        background-image: url(foto4.jpeg);
+        background-repeat:no-repeat; ;
+
+      }
+      div {
+        float: left;
+        border :1px solid #444444;
+        padding:10px;
+        margin: 10px;
+        background:#3B3B3B;
+      }
+    </style>
+    <script type="text/javascript;version=1.8" src="chroma.js"></script>
+  </head>
+
+  <body onload="processor.doLoad()">
+    <div>
+      <video id="video" src="video2.mp4" controls="true" height:"480" width: "180" loop />
+    </div>
+    <div>
+      <canvas id="c1" width="260" height="170"/>
+    </div>
+    <div>
+      <canvas id="c2" width="260" height="170"/>
+    </div>
+  </body>
+</html>

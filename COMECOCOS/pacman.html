@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<img src="titulo.png"  width="600px" height=" 100px" style = "margin-left: 290px" </img>
+<meta charset="UTF-8">
+<link href='icono.png' rel='shortcut icon' type='image/png'>
+<title>Comecocos</title>
+<style>
+
+  img{
+
+    /*margin-left: 290px*/
+  }
+  h2 {
+    /*margin-left: 150px;*/
+
+    align-content: center;
+    text-align: justify;
+    font-family:monospace;;
+    font-weight: normal;
+    color: yellow;
+    float: left;
+    font-style: italic;
+    text-overflow:clip;
+  }
+  h1{
+
+    text-align: justify;
+    font-family:monospace;;
+    font-weight: normal;
+    float: center;
+    margin-top: -100px;
+    font-style: italic;
+    text-overflow:clip;
+    color: yellow;
+
+  }
+
+  h3{
+    font-size:150%
+    align-content: center;
+    text-align: justify;
+    font-family:monospace;;
+    font-weight: normal;
+    float: right;
+    font-style: italic;
+    text-overflow:clip;
+    color: yellow;
+
+  }
+  canvas{
+    margin-left: 250px;
+    background-color: black;
+  }
+
+  body {
+    background-color: black;
+  }
+
+
+
+</style>
+<script src="pacman.js"></script>
+
+</head>
+
+<body onkeydown="keyHandler(event)" onload="main()" ondrop="drop(event)" ondragover="allowDrop(event)" id="drop">
+
+  <div class="dragAndDrop">
+      <img class="green" id="drag1" src="pacman_green_right.png" draggable="true" width="20px" height="20px" ondragstart="drag(event)" style = "margin-left: 250px" >
+      <img class ="blue" id="drag2" src ="pacman_blue_right.png" draggable = "true" width="20px" height="20px" ondragstart="drag(event)"  style = "margin-left: 250px">
+      <img class="yellow" id="drag3" src ="pacman_right.png" draggable = "true" width="20px" height="20px" ondragstart="drag(event)" style = "margin-left: 250px">
+  </div>
+<canvas id="myCanvas" width="500" height="500" style="border:10px solid #0000ff">
+
+Tu navegador no soporta canvas</canvas>
+  <h2> PUNTOS:                            </h2>
+  <h2 id="puntos"></h2>
+  <h1>                   VIDAS    </h1>
+  <img id = "vida1"   width="30px" height=" 30px" style = "float:right margin-top:1px"</img>
+  <img id = "vida2"   width="30px" height=" 30px"  style = "float:right margin-top:1px"</img>
+  <img id = "vida3"  width="30px" height=" 30px" style = "float:right margin-top:1px"</img>
+
+  <h3 id="seconds"  style="float:right " >30</h3>
+  <h3  style="float:right " >:</h3>
+  <h3 id = "minutes" style="float:right " style=" margin-right:20px" > 02</h3>
+  <button onclick="Play_Pause()"  style="float:right ">Start/Pause</button>
+</body>
+
+</html>
